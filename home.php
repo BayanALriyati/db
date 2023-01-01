@@ -90,7 +90,11 @@ if(isset($_SESSION['user_id'])){
 
 <section class="category1">
 
-   <h1 class="title">Category</h1>
+   <div class="zeena">
+      <h1 class="title">Category</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
+
 
    <div class="box-container1">
    <?php  $select_catogry =" SELECT * FROM category " ;
@@ -117,7 +121,11 @@ if(isset($_SESSION['user_id'])){
 
 <section class="home-products">
 
-   <h1 class="heading">On Sale</h1>
+   <div class="zeena">
+      <h1 class="heading">On Sale</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
+
 
    <div class="swiper products-slider">
 

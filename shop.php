@@ -34,8 +34,10 @@ if(isset($_SESSION['user_id'])){
 
 <section class="products">
 
-   <h1 class="heading">latest products</h1>
-
+   <div class="zeena latest">
+      <h1 class="heading" id="lated">latest products</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
    <div class="box-container">
 
    <?php
