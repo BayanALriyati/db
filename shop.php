@@ -31,7 +31,22 @@ if(isset($_SESSION['user_id'])){
 <body>
    
 <?php include 'components/user_header.php'; ?>
+<section>
+<h1 class="heading">Shop by Category</h1>
 
+<header class="header-shop">
+
+  <div>
+    <button>ALL PRODUCT</button>
+    <button>RINGS</button>
+    <button>NECKLACES</button>
+    <button>EARRINGS</button>
+    <button>BRACELETS</button>
+
+  </div>
+
+</header>
+</section>
 <section class="products">
    <h1 class="heading">latest products</h1>
 
