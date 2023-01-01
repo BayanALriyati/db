@@ -93,26 +93,22 @@ if(isset($_SESSION['user_id'])){
    <h1 class="title">Category</h1>
 
    <div class="box-container1">
+   <?php  $select_catogry =" SELECT * FROM category " ;
+      $X = $conn-> prepare($select_catogry);
+      $X -> execute();
+      while ($c = $X->fetch() ){
+      $category_id= $c['category_id'];
+      $category_name = $c['category_name'];
+      $image_01 = $c['image_01'];
+      
 
-      <a href="category.php?category=laptop" class="box1">
-         <img src="images\ca r.png" alt="" width="30" height="30">
-         <h3>Rings</h3>
+      ?>
+      <a href="category.php?category=<?php echo "$category_name" ?>" class="box1">
+         <img src="images\<?php echo "$image_01" ?>" alt="" width="30" height="30">
+         <h3><?php echo "$category_name" ?></h3>
       </a>
-   
-      <a href="category.php?category=laptop" class="box1">
-         <img src="images\ca b.png" alt="" width="30" height="30">
-         <h3>Bracelets</h3>
-      </a>
-
-      <a href="category.php?category=laptop" class="box1">
-         <img src="images\ca n.png" alt="" width="30" height="30">
-         <h3>Necklace</h3>
-      </a>
-   
-      <a href="category.php?category=laptop" class="box1">
-         <img src="images\ca e.png" alt="" width="30" height="30">
-         <h3>Earrings</h3>
-      </a>
+      
+      <?php } ?>
    
    </div>
 
