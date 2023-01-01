@@ -10,8 +10,9 @@
    --black:#333;
    --white:#fff;
    --light-color:#666;
-   --light-bg:#fff6e5;
-   /* --light-bg:#eee; */
+   /* --light-bg:#fff6e5; */
+   /* --light-bg:#fff6e5; */
+   --light-bg:#eee;
    /* --border:.2rem solid var(--black); منظر الاطارات غير جميل */
    --box-shadow:0 .5rem 1rem rgba(0, 0, 0,0.441);
 }
@@ -98,6 +99,8 @@ section{
 .delete-btn{
    background-color: var(--red);
 }
+
+
 
 .flex-btn{
    display: flex;
@@ -1078,6 +1081,9 @@ section{
       width: 100%;
    }
 
+}
+:root{
+   --swiper-theme-color:var(--orange) !important;
 }
 
 /* ///////////////////////////////////////// */
