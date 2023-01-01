@@ -1,0 +1,22 @@
+.add-comment h3{
+ margin: 0 0 10px;
+ font-size: 20px ;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.add-comment h3{
+    margin: 0 0 10px;
+    font-size: 18px ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+   }
+.add-comment textarea{
+    display: block;
+    margin-top: 10px;
+    width: 600px;
+    height: 60px;
+}
+.add-comment input{
+    width: 170px;
+}
+.comm{
+    font-size: 15px ; 
+}

@@ -1,0 +1,39 @@
+.title{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    font-weight: 500; 
+}
+.cimg{
+width: 100%;
+height: 40rem;
+
+}
+
+.container-page{
+width : 80%;
+padding: 20px 60px 40px 40px;
+display: flex;
+align-items: center;
+justify-content:space-between;
+padding-left: 20rem;
+
+}
+.details{
+text-align: center;
+}
+.conticon{
+    font-size: 3rem;
+    color : #185E5B ;
+    
+}
+.topic{
+    font-size: 18px;
+    font-weight: 600;
+}
+.text-one{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(56, 61, 52);
+}
