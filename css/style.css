@@ -314,13 +314,16 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
    gap:1.5rem;
    align-items: flex-start;
+
 }
 
 .category1 .box-container1 .box1{
    background-color: var(--white);
    padding:2rem;
-   width: 20rem;
+   width: 25rem;
+   height: 25rem;
    text-align: center;
+   border: 6px solid #f39c12;
    border-radius: 50%;
    box-shadow:var(--box-shadow);
    
@@ -328,8 +331,9 @@ section{
 
 .category1 .box-container1 .box1 img{
    width: 100%;
-   height: 10rem;
+   height: 13rem;
    object-fit: contain;
+   padding-top: .5rem;
 }
 
 .category1 .box-container1 .box1 h3{
@@ -531,6 +535,27 @@ section{
    align-items: flex-start;
 }
 
+.header-shop{
+   margin: 3rem 25rem;
+   width: 100%;
+}
+
+.header-shop button {
+   margin: 2rem .5rem;
+   color: var(--black);
+   background-color: #fff;
+   padding: 2rem;
+   border: 2px solid black;
+}
+
+
+.header-shop button:hover {
+   background-color:var(--main-color) ;
+   color:var(--white);
+} 
+
+
+
 .products .box-container .box{
    position: relative;
    background-color: var(--white);
@@ -612,6 +637,7 @@ section{
    color:var(--red);
    margin-right: auto;
 }
+
 
 .form-container form{
    background-color: var(--white);
@@ -1105,5 +1131,7 @@ background-image: overlay;
 #lated{
    margin-top: 10rem;
 }
+
+
 
 /* ///////////////////////////////////////// */
