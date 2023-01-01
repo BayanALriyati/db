@@ -527,6 +527,27 @@ section{
    align-items: flex-start;
 }
 
+.header-shop{
+   margin: 3rem 25rem;
+   width: 100%;
+}
+
+.header-shop button {
+   margin: 2rem .5rem;
+   color: var(--black);
+   background-color: #fff;
+   padding: 2rem;
+   border: 2px solid black;
+}
+
+
+.header-shop button:hover {
+   background-color:var(--main-color) ;
+   color:var(--white);
+} 
+
+
+
 .products .box-container .box{
    position: relative;
    background-color: var(--white);
@@ -608,6 +629,7 @@ section{
    color:var(--red);
    margin-right: auto;
 }
+
 
 .form-container form{
    background-color: var(--white);
@@ -1087,5 +1109,7 @@ section{
 :root{
    --swiper-theme-color:var(--orange) !important;
 }
+
+
 
 /* ///////////////////////////////////////// */
