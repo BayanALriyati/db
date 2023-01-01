@@ -117,7 +117,7 @@ if(isset($_SESSION['user_id'])){
 
 <section class="home-products">
 
-   <h1 class="heading">Salling products</h1>
+   <h1 class="heading">On Sale</h1>
 
    <div class="swiper products-slider">
 
