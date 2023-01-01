@@ -26,8 +26,8 @@ if(isset($_SESSION['user_id'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
-
+   <!-- <link rel="stylesheet" href="../css/style.css"> -->
+   <style><?php include('css/style.css')?></style>
 </head>
 <body>
    
@@ -182,29 +182,6 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable:true,
     },
-});
-
- var swiper = new Swiper(".category-slider", {
-   loop:true,
-   spaceBetween: 20,
-   pagination: {
-      el: ".swiper-pagination",
-      clickable:true,
-   },
-   breakpoints: {
-      0: {
-         slidesPerView: 2,
-       },
-      650: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1024: {
-        slidesPerView: 5,
-      },
-   },
 });
 
 var swiper = new Swiper(".products-slider", {

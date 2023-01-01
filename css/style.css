@@ -606,6 +606,7 @@ section{
    margin-right: auto;
 }
 
+
 .form-container form{
    background-color: var(--white);
    padding:2rem;
@@ -1079,5 +1080,7 @@ section{
    }
 
 }
+
+
 
 /* ///////////////////////////////////////// */
