@@ -310,13 +310,16 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
    gap:1.5rem;
    align-items: flex-start;
+
 }
 
 .category1 .box-container1 .box1{
    background-color: var(--white);
    padding:2rem;
-   width: 20rem;
+   width: 25rem;
+   height: 25rem;
    text-align: center;
+   border: 6px solid #f39c12;
    border-radius: 50%;
    box-shadow:var(--box-shadow);
    
@@ -324,8 +327,9 @@ section{
 
 .category1 .box-container1 .box1 img{
    width: 100%;
-   height: 10rem;
+   height: 13rem;
    object-fit: contain;
+   padding-top: .5rem;
 }
 
 .category1 .box-container1 .box1 h3{

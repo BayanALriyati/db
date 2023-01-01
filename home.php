@@ -26,8 +26,7 @@ if(isset($_SESSION['user_id'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <!-- <link rel="stylesheet" href="../css/style.css"> -->
-   <style><?php include('css/style.css')?></style>
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
    
@@ -104,7 +103,7 @@ if(isset($_SESSION['user_id'])){
 
       ?>
       <a href="category.php?category=<?php echo "$category_name" ?>" class="box1">
-         <img src="images\<?php echo "$image_01" ?>" alt="" width="30" height="30">
+         <img src="images\<?php echo "$image_01" ?>" alt="" width="70" height="70">
          <h3><?php echo "$category_name" ?></h3>
       </a>
       
