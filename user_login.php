@@ -45,21 +45,26 @@ if(isset($_POST['submit'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/login.css">
+
 
 </head>
 <body>
    
 <?php include 'components/user_header.php'; ?>
 
-<section class="form-container">
+<section class="form-container mybox">
 
    <form action="" method="post">
-      <h3>login now</h3>
-      <input type="email" name="email" required placeholder="enter your email" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" required placeholder="enter your password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="login now" class="btn" name="submit">
+      <h3>login</h3>
+      <p> - Welcome Back -</p>
+      <input type="email" name="email" required placeholder="Enter Your Email" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      
+      <input type="password" name="pass" required placeholder="Enter Your Password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="login now" class="btn mybtn" name="submit">
       <p>don't have an account?</p>
-      <a href="user_register.php" class="option-btn">register now</a>
+      <!-- class="option-btn mybtn" -->
+      <a href="user_register.php" ><p class="myp">register now</p></a>
    </form>
 
 </section>

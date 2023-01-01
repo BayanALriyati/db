@@ -18,18 +18,18 @@
       <a href="home.php" class="logo">FELUX<span>.</span></a>
 
       <nav class="navbar">
-         <a href="home.php">home</a>
-         <a href="about.php">about</a>
-         <a href="orders.php">orders</a>
-         <a href="shop.php">shop</a>
-         <a href="contact.php">contact</a>
+         <a href="home.php">Home</a>
+         <a href="about.php">About</a>
+         <a href="orders.php">Orders</a>
+         <a href="shop.php">Shop</a>
+         <a href="contact.php">Contact</a>
       </nav>
 
       <div class="icons">
          <?php
-            $count_wishlist_items = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
-            $count_wishlist_items->execute([$user_id]);
-            $total_wishlist_counts = $count_wishlist_items->rowCount();
+            // $count_wishlist_items = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
+            // $count_wishlist_items->execute([$user_id]);
+            // $total_wishlist_counts = $count_wishlist_items->rowCount();
 
             $count_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
             $count_cart_items->execute([$user_id]);

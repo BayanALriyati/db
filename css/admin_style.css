@@ -3,17 +3,21 @@
 
 :root{
    /* edit color */
-   --main-color:#11b502;   /* edit color */
+   /* --main-color:#e0b473;    */
+   --main-color:#185e5d;   /* edit color */
    --show-color :#e0b473;
-   --orange:#7bc90dca;
+   --btn-color :#fff6e5;
+   --orange:#f39c12;
    --red:#e74c3c;
    --black:#333;
    --white:#fff;
+   /* --white:#185e5d; */
    --light-color:#666;
-   --light-bg:#ffffff;
-   /* --light-bg:#eee; */
-   /* --border:.1rem solid var(--black);  */
-   --box-shadow:0 .5rem 2rem rgba(17, 37, 2, 0.655);
+   /* --light-bg:#eee7d9; */
+   --light-bg:#eee;
+   /* --border:.2rem solid var(--black); */
+   --box-shadow:0 .5rem 1rem rgba(0, 0, 0,0.441);
+   --swiper-theme-color:var(--orange) !important;
 }
 
 *{
@@ -21,7 +25,7 @@
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
-   text-decoration: none;
+   text-decoration: none !important;
 }
 
 *::selection{
@@ -96,14 +100,27 @@ section{
 }
 
 .delete-btn{
-   background-color: var(--red);
+   background-color: #4b4b4b;
+}
+.btn-primary{
+   /* background-color: #ffdead !important; */
+   background-color: var(--orange) !important;
+   border-color: #947950 !important;
+} 
+.btn-dark{
+   background-color: #4b4b4b !important;
+   border-color: #947950 !important; 
+   color :white !important;
+   
 }
 
 .flex-btn{
    display: flex;
    gap:1rem;
 }
-
+.swiper-pagination{
+   color: #e74c3c !important;
+}
 .message{
    position: sticky;
    top:0;
@@ -213,21 +230,21 @@ section{
 
 .header .flex .logo{
    font-size: 2.5rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .header .flex .logo span{
-   color:var(--main-color);
+   color:var(--white);
 }
 
 .header .flex .navbar a{
    margin:0 1rem;
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .header .flex .navbar a:hover{
-   color:var(--main-color);
+   color:var(--show-color);
    text-decoration: underline;
 }
 
@@ -235,11 +252,11 @@ section{
    margin-left: 1.7rem;
    font-size: 2.5rem;
    cursor: pointer;
-   color:var(--black);
+   color:var(--white);
 }
 
 .header .flex .icons div:hover{
-   color:var(--main-color);
+   color:var(--show-color);
 }
 
 .header .flex .profile{
@@ -628,4 +645,7 @@ section{
       grid-template-columns: 1fr;
    }
 
+}
+:root{
+   --swiper-theme-color:var(--orange) !important;
 }
