@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
 
-   $update_profile = $conn->prepare("UPDATE `users` SET name = ?, email = ? WHERE id = ?");
+   $update_profile = $conn->prepare("UPDATE `users` SET name = ?, email = ? WHERE user_id = ?");
    $update_profile->execute([$name, $email, $user_id]);
 
    $empty_pass = 'da39a3ee5e6b4b0d3255bfef95601890afd80709';
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
       $message[] = 'confirm password not matched!';
    }else{
       if($new_pass != $empty_pass){
-         $update_admin_pass = $conn->prepare("UPDATE `users` SET password = ? WHERE id = ?");
+         $update_admin_pass = $conn->prepare("UPDATE `users` SET password = ? WHERE user_id = ?");
          $update_admin_pass->execute([$cpass, $user_id]);
          $message[] = 'password updated successfully!';
       }else{

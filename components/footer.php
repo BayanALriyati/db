@@ -1,7 +1,4 @@
 <footer class="footer">
-
-  
-
             <div class="social">
                <a class="icon" href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
                <a class="icon" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
@@ -27,12 +24,5 @@
                  <p class=copyright>
                © 2023 FeLux
                  </p>
-   
-      
-
    </section>
-
-   
- 
-
 </footer>

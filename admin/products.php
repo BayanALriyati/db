@@ -229,13 +229,13 @@ if(isset($_GET['delete'])){
       ?>
     <tr>
       <td ><?php echo $fetch_products['product_id'];?></td>
-      <td ><img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="" width="50px"></td>
+      <td ><img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="" width="60px"></td>
       <td ><span><?= $fetch_products['details']; ?></td>
       <td ><?php echo $fetch_products['name'];?></td>
       <td >JD<span><?= $fetch_products['price']; ?></td>
-      <td >JD<span><?= $fetch_products['price_discount']; ?></td>
-      <td><a style="background-color: green ;color:white;" href="add_sale.php?sale=<?= $fetch_products['product_id']; ?>" class="btn">Add Sale</a></td>
-      <td> <a  style="background-color: red;" href="remove_sale.php?removeSale=<?= $fetch_products['product_id']; ?>"class="btn">Remove Sale</a></td>
+      <td style="text-align:center;">JD<span><?= $fetch_products['price_discount']; ?></td>
+      <td style="text-align:center;"><a style="color:green;" href="add_sale.php?sale=<?= $fetch_products['product_id']; ?>"><i class="fa-solid fa-square-plus"></i></a></td>
+      <td style="text-align:center;"> <a href="remove_sale.php?removeSale=<?= $fetch_products['product_id']; ?>"><i class="fa-solid fa-square-minus delete1"></i></a></td>
       <?php $product_category = $conn->prepare("SELECT * 
                                         FROM `products`
                                         INNER JOIN `category` ON products.category_id = category.category_id");
@@ -251,10 +251,10 @@ if(isset($_GET['delete'])){
                      }
                   }
             ?>
-      <td>
-         <button type="button" class="btn btn-primary s-s"><a style="color:black;" href="update_product.php?update=<?= $fetch_products['product_id']; ?>" >edit</a></td>
-      <td>   
-         <button type="button" class="btn btn-dark s-s"><a style="color:white;" href="products.php?delete=<?= $fetch_products['product_id']; ?>"  onclick="return confirm('delete this product?');">delete</a>
+      <td style="text-align:center;">
+         <button type="button" class="s-s"><a href="update_product.php?update=<?= $fetch_products['product_id']; ?>" ><i class="fa-solid fa-pen-to-square "></i></a></td>
+      <td style="text-align:center;">   
+         <button type="button" class="s-s"><a style="color:black; text-align:center;" href="products.php?delete=<?= $fetch_products['product_id']; ?>"  onclick="return confirm('delete this product?');"><i class="fa-solid fa-trash delete1"></i></a>
       </td>
     </tr>
     <?php

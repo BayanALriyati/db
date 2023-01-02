@@ -78,7 +78,7 @@ if(isset($_GET['delete'])){
       <th scope="row"><?= $fetch_accounts['user_id']; ?></th>
       <td><?= $fetch_accounts['name']; ?></td>
       <td><?= $fetch_accounts['email']; ?></td>
-      <td><button type="button" class="btn"><a href="users_accounts.php?delete=<?= $fetch_accounts['user_id']; ?>" onclick="return confirm('delete this account? the user related information will also be delete!')" class="delete-btn">delete</a></button></td>
+      <td><button type="button" ><a href="users_accounts.php?delete=<?= $fetch_accounts['user_id']; ?>" onclick="return confirm('delete this account? the user related information will also be delete!')" ><i class="fa-solid fa-trash delete1"></a></button></td>
       
     </tr>
     <?php
