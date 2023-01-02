@@ -119,6 +119,14 @@ if(isset($_GET['delete'])){
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
+   .flex{
+      font-family:'Times New Roman', Times, serif !important;
+        /* font-weight: 900 !important; */
+   }
+   h1{
+      font-family:'Times New Roman', Times, serif !important;
+        font-weight: 900 !important;
+   }
    table, th, td {
   font-size: large;
  }
@@ -130,7 +138,7 @@ if(isset($_GET['delete'])){
 
 <section class="add-products">
 
-   <h1 class="heading">add product</h1>
+   <h1 class="heading">Add product</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
       <div class="flex">
@@ -189,7 +197,7 @@ if(isset($_GET['delete'])){
 
 <!-- بدي اعرض حاليا كل المنتجات الي عندي مع الاشياء الخاصة فيها : الاسم - السعر - الصورة - التفاصيل - الكاتيجوري -->
 
-   <h1 class="heading">products added</h1>
+   <h1 class="heading">Products Added</h1>
    <?php
 // $sql = "SELECT products.product_id,products.name,products.price,products.price_discount,products.image,products.description, category.category_name
 // FROM products
@@ -252,7 +260,7 @@ if(isset($_GET['delete'])){
                   }
             ?>
       <td style="text-align:center;">
-         <button type="button" class="s-s"><a href="update_product.php?update=<?= $fetch_products['product_id']; ?>" ><i class="fa-solid fa-pen-to-square "></i></a></td>
+         <button type="button" class="s-s"><a class="editbtn" href="update_product.php?update=<?= $fetch_products['product_id']; ?>" ><i class="fa-solid fa-pen-to-square "></i></a></td>
       <td style="text-align:center;">   
          <button type="button" class="s-s"><a style="color:black; text-align:center;" href="products.php?delete=<?= $fetch_products['product_id']; ?>"  onclick="return confirm('delete this product?');"><i class="fa-solid fa-trash delete1"></i></a>
       </td>

@@ -25,7 +25,19 @@ if(!isset($admin_id)){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <link rel="stylesheet" href="../css/admin_style.css">
-
+<style>
+   .flex{
+      font-family:'Times New Roman', Times, serif !important;
+        /* font-weight: 900 !important; */
+   }
+   .heading{
+    font-weight:900 !important
+   }
+    
+    a{
+        text-decoration:none !important;
+    }
+</style>
 </head>
 <body>
 
@@ -34,7 +46,7 @@ if(!isset($admin_id)){
 <section class="dashboard">
 
    <div class="zeena">
-      <h1 class="heading">dashboard</h1>
+      <h1 class="heading">Dashboard</h1>
       <img src="../images/zeena12.png" alt="" width="30%">
    </div>
 

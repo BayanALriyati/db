@@ -63,11 +63,12 @@ section{
 }
 
 .heading{
-   font-size: 4rem;
-   color:var(--black);
-   margin-bottom: 2rem;
+   font-size: 5rem;
+   color:var(--main-color);
+   margin-bottom: 4rem;
+   margin-top: 6rem;
    text-align: center;
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
 }
 
 .btn,
@@ -84,7 +85,9 @@ section{
    cursor: pointer;
    text-align: center;
 }
-
+.editbtn{
+   color: var(--orange) !important;
+}
 .btn:hover,
 .delete-btn:hover,
 .option-btn:hover{

@@ -45,6 +45,17 @@ if(isset($_GET['delete'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+      .flex{
+      font-family:'Times New Roman', Times, serif !important;
+        /* font-weight: 900 !important; */
+   }
+      .heading{
+         font-family:'Times New Roman', Times, serif !important;
+        font-weight: 900 !important;
+      }
+    a{
+        text-decoration:none !important;
+    }
    table, th, td {
   font-size: large;
  }
@@ -56,7 +67,7 @@ if(isset($_GET['delete'])){
 
 <section class="accounts">
 
-   <h1 class="heading">user accounts</h1>
+   <h1 class="heading">User Accounts</h1>
    <div class="col-lg-9 m-auto ">
                     <div class="table-responsive table--no-card m-b-30">
                         <table class="table table-borderless table-striped table-earning">  <thead>
