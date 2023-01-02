@@ -64,7 +64,7 @@ section{
 
 .heading{
    font-size: 4rem;
-   color:var(--black);
+   color:var(--main-color);
    margin-bottom: 2rem;
    text-align: center;
    text-transform: uppercase;
@@ -85,26 +85,35 @@ section{
    cursor: pointer;
    text-align: center;
 }
-
-.btn:hover,
-.delete-btn:hover,
-.option-btn:hover{
-   background-color: var(--black);
-}
-
+/* _______button________ */
 .btn{
    background-color: var(--main-color);
 }
+.btn:hover{
+   background-color: var(--white);
+   border: 1px solid var(--main-color);
+   color:var(--main-color) ;
+}
+
 
 .option-btn{
    background-color: var(--orange);
+}
+.option-btn:hover{
+   background-color: var(--white);
+   border: 1px solid var(--orange);
+   color:var(--orange) ;
 }
 
 .delete-btn{
    background-color: var(--red);
 }
 
-
+.delete-btn:hover{
+   background-color: var(--white);
+   border: 1px solid var(--red); 
+   color:var(--red); 
+}
 
 .flex-btn{
    display: flex;
@@ -194,11 +203,12 @@ section{
    margin:0 1rem;
    font-size: 2rem;
    color:var(--white);
+  
 }
 
 .header .flex .navbar a:hover{
    color:var(--light-bg);
-   text-decoration: underline;
+   list-style:none ;
 }
 
 
@@ -303,7 +313,7 @@ section{
 
 .category1 h1{
    text-align: center;
-   color: var(--black);
+   color: var(--main-color);
    margin-top: 2rem;
    padding: 2rem;
    font-size: 5rem;
@@ -387,11 +397,11 @@ section{
 }
 
 .home-products .slide .flex .qty{
-   width: 7rem;
+   width: 5rem;
    padding:1rem;
-   border:var(--border);
    font-size: 1.8rem;
    color:var(--black);
+   border: 1px solid var(--main-color);
    border-radius: .5rem;
 }
 
@@ -513,11 +523,13 @@ section{
 }
 
 .quick-view form .row .flex .qty{
-   width: 7rem;
+   width: 5rem;
+   height:  5rem;
    padding:1rem;
-   border:var(--border);
+   /* border:var(--border); */
    font-size: 1.8rem;
    color:var(--black);
+   border: 1px solid var(--main-color);
    border-radius: .5rem;
 }
 
@@ -638,14 +650,17 @@ section{
    display: flex;
    align-items: center;
    gap:1rem;
+   justify-content: space-between;
 }
 
 .products .box-container .box .flex .qty{
-   width: 7rem;
+   width: 5rem;
+   height:  5rem;
    padding:1rem;
-   border:var(--border);
+   /* border:var(--border); */
    font-size: 1.8rem;
    color:var(--black);
+   border: 1px solid var(--main-color);
    border-radius: .5rem;
 }
 
@@ -965,11 +980,11 @@ section{
 
 }
 .footer .social .icon{
-   font-size: 24px;
+   font-size: 32px;
    color: inherit;
    border: 1px solid var(--main-color);
-   width: 40px;
-   height: 40px;
+   width: 45px;
+   height: 45px;
    line-height: 30px;
    display: inline-block;
    text-align: center;
@@ -985,7 +1000,7 @@ section{
    margin-top:0 ;
    padding: 0;
    list-style:none ;
-   font-size: 18px;
+   font-size: 22px;
    line-height: 1.6;
    margin-bottom: 0;
    text-align: center;
@@ -1007,7 +1022,7 @@ section{
 .footer .copyright {
    margin-top: 15px;
    text-align: center;
-   font-size: 13px;
+   font-size: 17px;
    color: #666;
 }
 @media (max-width:991px){

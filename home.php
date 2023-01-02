@@ -101,7 +101,7 @@ if(isset($_SESSION['user_id'])){
 <section class="category1">
 
    <div class="zeena">
-      <h1 class="title">Category</h1>
+      <h1 class="heading">Category</h1>
       <img src="images/zeena1.png" alt="" width="30%">
    </div>
 
@@ -171,9 +171,10 @@ if(isset($_SESSION['user_id'])){
 
 <?php } else { ?>
 
-<div class="name" style="color:green;">$<?= $fetch_product['price']; ?></div> <?php } ?>         <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
-      </div>
-      <input type="submit" value="add to cart" class="btn" name="addTOcart">
+<div class="name" style="color:green;">$<?= $fetch_product['price']; ?></div> <?php } ?>  
+   <input  type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
+   </div>
+   <input type="submit" value="add to cart" class="btn" name="addTOcart">
    </form>
    <?php
       }
