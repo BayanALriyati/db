@@ -256,9 +256,10 @@ section{
 
 
 .home-bg{
-   background:url(../images/home-bg.jpg) no-repeat; /* edit */
+   background:url(../images/home-bg.jpg) no-repeat;/* edit */
    background-size: cover;
    background-position: center;
+   opacity: 1;
 }
 
 .home-bg .home .slide{
