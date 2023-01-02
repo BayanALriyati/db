@@ -33,10 +33,14 @@ if(!isset($admin_id)){
 
 <section class="dashboard">
 
-   <h1 class="heading">dashboard</h1>
+   <div class="zeena">
+      <h1 class="heading">dashboard</h1>
+      <img src="../images/zeena12.png" alt="" width="30%">
+   </div>
+
 <!-- <h3>welcome!</h3>
          <p><?= $fetch_profile['name']; ?></p> -->
-   <div class="box-container" style="display: flex;flex-direction: column;align-items: center;">
+   <div class="box-container" style="display: flex;align-items: center;">
          
    
       <div class="box" style="
@@ -64,6 +68,10 @@ if(!isset($admin_id)){
    </div>
 
 </section>
+
+
+<!-- <div class="dashbg"><img src="../images/dashbg.jpg" alt=""></div> -->
+
 
 <script src="../js/admin_script.js"></script>
    
