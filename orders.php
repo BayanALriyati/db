@@ -25,7 +25,22 @@ if(isset($_SESSION['user_id'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 17px;
+}
 
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+</style>
 </head>
 <body>
    
@@ -34,41 +49,70 @@ if(isset($_SESSION['user_id'])){
 <section class="orders">
 
    <h1 class="heading">placed orders</h1>
-
+   <br>
+   <br>
    <div class="box-container">
+   <table>
+   <tr>
+   <th>Placed on</th>
+   <th>Name</th>
+   <th>Number</th>
+   <th>Email</th>
+   <th>Total Products</th>
+   <th>Total Price </th>
+   <th>Order Date</th>
+</tr>
 
    <?php
-      if($user_id == ''){
-         echo '<p class="empty">please login to see your orders</p>';
-      }else{
-         $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ?");
-         $select_orders->execute([$user_id]);
-         if($select_orders->rowCount() > 0){
-            while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
+      $select_orders = $conn->prepare("SELECT * 
+                                       FROM `orders`
+                                       INNER JOIN `users` ON Orders.user_id = users.user_id;");
+      $select_orders->execute();
+      if($select_orders->rowCount() > 0){
+         while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
+            if ($fetch_orders['user_id'] == $user_id){
    ?>
-   <div class="box">
-      <p>placed on : <span><?= $fetch_orders['placed_on']; ?></span></p>
-      <p>name : <span><?= $fetch_orders['name']; ?></span></p>
-      <p>email : <span><?= $fetch_orders['email']; ?></span></p>
-      <p>number : <span><?= $fetch_orders['number']; ?></span></p>
-      <p>address : <span><?= $fetch_orders['address']; ?></span></p>
-      <p>payment method : <span><?= $fetch_orders['method']; ?></span></p>
-      <p>your orders : <span><?= $fetch_orders['total_products']; ?></span></p>
-      <p>total price : <span>$<?= $fetch_orders['total_price']; ?>/-</span></p>
-      <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
-   </div>
+   <tr>
+   <td><?= $fetch_orders['location']; ?></td>
+   <td><?= $fetch_orders['name']; ?></td>
+   <td><?= $fetch_orders['number']; ?></td>
+   <td><?= $fetch_orders['email']; ?></td>
+   <td><?= $fetch_orders['total_quantity']; ?></td>
+   <td>JD<?= $fetch_orders['total_price']; ?> </td>
+   <td><?= $fetch_orders['order_time']; ?></td>
+</tr>
+
    <?php
-      }
+         } }
       }else{
          echo '<p class="empty">no orders placed yet!</p>';
       }
-      }
    ?>
-
-   </div>
+</table>
+<div class="box-container">
 
 </section>
 
+<!-- <table>
+   <tr>
+   <th>placed on</th>
+   <th>name</th>
+   <th>number</th>
+   <th>email</th>
+   <th>total products</th>
+   <th>total price </th>
+   <th>Order Time</th>
+</tr>
+<tr>
+   <th><?= $fetch_orders['location']; ?></th>
+   <th><?= $fetch_orders['name']; ?></th>
+   <th><?= $fetch_orders['number']; ?></th>
+   <th><?= $fetch_orders['email']; ?></th>
+   <th><?= $fetch_orders['total_quantity']; ?></th>
+   <th>JD<?= $fetch_orders['total_price']; ?> </th>
+   <th><?= $fetch_orders['order_time']; ?></th>
+</tr>
+</table> -->
 
 
 
@@ -80,8 +124,7 @@ if(isset($_SESSION['user_id'])){
 
 
 
-
-<?php include 'components/footer.php'; ?>
+<!-- <?php include 'components/footer.php'; ?> -->
 
 <script src="js/script.js"></script>
 
