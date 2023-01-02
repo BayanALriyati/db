@@ -298,7 +298,7 @@ section{
 
 .category1 {
    margin-top: 2rem;
-   margin-bottom: 15rem;
+   margin-bottom: 10rem;
 }
 
 .category1 h1{
@@ -537,22 +537,34 @@ section{
 }
 
 .header-shop{
-   margin: 3rem 25rem;
+   margin: auto auto;
    width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+   gap:.5rem;
+   justify-content: center;
+   align-items: flex-start;
+  
 }
 
-.header-shop button {
-   margin: 2rem .5rem;
-   color: var(--black);
-   background-color: #fff;
-   padding: 2rem;
-   border: 2px solid black;
+.header-shop a {
+   text-align: center;
+   width: 70%;
+   height: 60px;
+   margin: auto auto;
+   color: var(--white);
+   font-size: 17px;
+   background-color: var(--main-color);
+   padding-top: 1.5rem  ;
+   transform: scale(1.2);
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-
-.header-shop button:hover {
-   background-color:var(--main-color) ;
-   color:var(--white);
+.header-shop a:hover {
+   background-color:var(--white);
+   color:var(--black);
+   transform: scale(1.1);
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 } 
 
 
@@ -785,59 +797,6 @@ section{
 .contact form textarea{
    height: 15rem;
    resize: none;
-}
-
-.search-form form{
-   display: flex;
-   gap:1rem;
-}
-
-.search-form form input{
-   width: 100%;
-   border:var(--border);
-   border-radius: .5rem;
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   padding:1.4rem;
-   font-size: 1.8rem;
-   color:var(--black);
-}
-
-.search-form form button{
-   font-size: 2.5rem;
-   height: 5.5rem;
-   line-height: 5.5rem;
-   background-color: var(--main-color);
-   cursor: pointer;
-   color:var(--white);
-   border-radius: .5rem;
-   width: 6rem;
-   text-align: center;
-}
-
-.search-form form button:hover{
-   background-color: var(--black);
-}
-
-.wishlist-total{
-   max-width: 50rem;
-   margin:0 auto;
-   margin-top: 3rem;
-   background-color: var(--white);
-   border:var(--border);
-   border-radius: .5rem;;
-   padding:2rem;
-   text-align: center;
-}
-
-.wishlist-total p{
-   font-size: 2.5rem;
-   color:var(--black);
-   margin-bottom: 2rem;
-}
-
-.wishlist-total p span{
-   color:var(--red);
 }
 
 .shopping-cart .fa-edit{
@@ -1126,11 +1085,11 @@ background-image: overlay;
 }
 
 .latest{
-   margin-bottom: 10rem;
+   margin-bottom: 5rem;
 
 }
 #lated{
-   margin-top: 10rem;
+   margin: top 0;;
 }
 
 
