@@ -40,21 +40,33 @@ if(isset($_SESSION['user_id'])){
 <body>
    
 <?php include 'components/user_header.php'; ?>
-<section>
-<h1 class="heading">Shop by Category</h1>
+<section class="category1">
 
-<header class="header-shop">
- 
-  <div>
-    <button name="product">ALL PRODUCT</button>
-    <button name="rings">RINGS</button>
-    <button name="necklaces">NECKLACES</button>
-    <button name="earrings">EARRINGS</button>
-    <button name="bracelets">BRACELETS</button>
+   <div class="zeena">
+      <h1 class="title">Shop by Category</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
 
-  </div>
 
-</header>
+   <div class="header-shop">
+      <a href="shop.php"><h3 id=all>PRODUCTS</h3></a>
+   <?php  $select_catogry =" SELECT * FROM category " ;
+      $X = $conn-> prepare($select_catogry);
+      $X -> execute();
+      while ($c = $X->fetch() ){
+      $category_id= $c['category_id'];
+      $category_name = $c['category_name'];
+   
+      ?>
+      <a href="category.php?category=<?php echo "$category_id" ?>" >
+          <h3><?php echo "$category_name" ?></h3>
+      </a>
+      
+      <?php } ?>
+      
+   
+   </div>
+
 </section>
 <section class="products">
 
