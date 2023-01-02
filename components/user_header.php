@@ -21,7 +21,6 @@
          
          <?php
          echo "<a href=home.php>Home</a>";
-         echo "<a href=orders.php>Orders</a>";
          echo " <a href=shop.php>Shop</a>";
          echo "<a href=about.php>About</a>";
          echo "<a href=contact.php>Contact</a>";
@@ -31,9 +30,6 @@
 
       <div class="icons">
          <?php
-            // $count_wishlist_items = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
-            // $count_wishlist_items->execute([$user_id]);
-            // $total_wishlist_counts = $count_wishlist_items->rowCount();
 
             $count_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
             $count_cart_items->execute([$user_id]);
