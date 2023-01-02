@@ -10,9 +10,18 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
+ ?>
+<?php if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
+   $product_id = $_POST['pid'];
+   $product_name = $_POST['name'];
+   $product_price = $_POST['price'];
+   $product_image = $_POST['image'];
+   $product_quantity = $_POST['qty'];
 
-?>
-
+   $send_to_cart = $conn->prepare("INSERT INTO `cart` (user_id , pid , name , price , image , quantity)
+                                    VALUES (? , ? , ? , ?, ? , ?)"); 
+   $send_to_cart->execute([$user_id , $product_id , $product_name , $product_price, $product_image, $product_quantity]);
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,26 +40,38 @@ if(isset($_SESSION['user_id'])){
 <body>
    
 <?php include 'components/user_header.php'; ?>
-<section>
-<h1 class="heading">Shop by Category</h1>
+<section class="category1">
 
-<header class="header-shop">
- 
-  <div>
-    <button name="product">ALL PRODUCT</button>
-    <button name="rings">RINGS</button>
-    <button name="necklaces">NECKLACES</button>
-    <button name="earrings">EARRINGS</button>
-    <button name="bracelets">BRACELETS</button>
+   <div class="zeena">
+      <h1 class="title">Shop by Category</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
 
-  </div>
 
-</header>
+   <div class="header-shop">
+      <a href="shop.php"><h3 id=all>PRODUCTS</h3></a>
+   <?php  $select_catogry =" SELECT * FROM category " ;
+      $X = $conn-> prepare($select_catogry);
+      $X -> execute();
+      while ($c = $X->fetch() ){
+      $category_id= $c['category_id'];
+      $category_name = $c['category_name'];
+   
+      ?>
+      <a href="category.php?category=<?php echo "$category_id" ?>" >
+          <h3><?php echo "$category_name" ?></h3>
+      </a>
+      
+      <?php } ?>
+      
+   
+   </div>
+
 </section>
 <section class="products">
 
    <div class="zeena latest">
-      <h1 class="heading" id="lated">latest products</h1>
+      <h1 class="heading" id="lated">Products</h1>
       <img src="images/zeena1.png" alt="" width="30%">
    </div>
    <div class="box-container">
@@ -64,17 +85,30 @@ if(isset($_SESSION['user_id'])){
    <form action="" method="post" class="box">
       <input type="hidden" name="pid" value="<?= $fetch_product['product_id']; ?>">
       <input type="hidden" name="name" value="<?= $fetch_product['name']; ?>">
-      <input type="hidden" name="price" value="<?= $fetch_product['price']; ?>">
+      <?php 
+      if ($fetch_product['is_sale'] == 1){
+         ?>
+         <input type="hidden" name="price" value="<?=$fetch_product['price_discount'];?>">
+         <?php
+      } else {
+         ?>
+         <input type="hidden" name="price" value="<?=$fetch_product['price'];?>">
+         <?php
+      }
+      ?>
+    
       <input type="hidden" name="image" value="<?= $fetch_product['image']; ?>">
-      <!-- <button class="fas fa-heart" type="submit" name="add_to_wishlist"></button> -->
-      <a href="quick_view.php?pid=<?= $fetch_product['product_id']; ?>" class="fas fa-eye"></a>
-      <img src="uploaded_img/<?= $fetch_product['image']; ?>" alt="">
+      <a href="quick_view.php?pid=<?= $fetch_product['product_id']; ?>"><img src="uploaded_img/<?= $fetch_product['image']; ?>" alt=""></a>
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
-         <div class="price"><span>$</span><?= $fetch_product['price']; ?></div>
-         <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
+      <?php if ($fetch_product['is_sale'] == 1){ ?>
+
+         <div class="price"><span><del style="text-decoration:line-through; color:silver">$<?= $fetch_product['price']; ?></del><ins style="color:green; padding:20px 0px"> $<?=$fetch_product['price_discount'];?></ins></span></div>
+         <?php } else { ?>
+            <div class="name" style="color:green;">$<?= $fetch_product['price']; ?></div> <?php } ?>         <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
+
+      <input type="submit" value="add to cart" class="btn" name="addTOcart">
 
    </form>
    <?php
