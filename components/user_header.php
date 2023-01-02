@@ -15,14 +15,18 @@
 
    <section class="flex">
 
-      <a href="home.php" class="logo">FELUX<span>.</span></a>
+      <a href="home.php" class="logo">FELUX<span>.</span ></a>
 
       <nav class="navbar">
-         <a href="home.php">Home</a>
-         <a href="about.php">About</a>
-         <a href="orders.php">Orders</a>
-         <a href="shop.php">Shop</a>
-         <a href="contact.php">Contact</a>
+         
+         <?php
+         echo "<a href=home.php>Home</a>";
+         echo "<a href=orders.php>Orders</a>";
+         echo " <a href=shop.php>Shop</a>";
+         echo "<a href=about.php>About</a>";
+         echo "<a href=contact.php>Contact</a>";
+         ?>
+        
       </nav>
 
       <div class="icons">
