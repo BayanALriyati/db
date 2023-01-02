@@ -999,12 +999,16 @@ section{
    /* padding-bottom: 7rem; */
 }
 
-.footer .grid{
+.footer .grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap:2rem;
-   align-items: flex-start;
+   gap: 2rem;
+   align-items: center;
+   align-content: stretch;
    justify-items: center;
+}
+.logo1 {
+   font-size: 3.5rem;
 }
 
 .footer .grid .box h3{
@@ -1015,7 +1019,7 @@ section{
 }
 
 .footer .grid .box a{
-   display: block;
+   /* display: block; */
    margin:1.5rem 0;
    font-size: 1.7rem;
    color:var(--light-color);
