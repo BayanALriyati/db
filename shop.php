@@ -37,7 +37,7 @@ if(isset($_SESSION['user_id'])){
 <header class="header-shop">
  
   <div>
-    <button name="product">ALL PRODUCT</button>
+    <a name="product">ALL PRODUCT</button>
     <button name="rings">RINGS</button>
     <button name="necklaces">NECKLACES</button>
     <button name="earrings">EARRINGS</button>
@@ -67,8 +67,8 @@ if(isset($_SESSION['user_id'])){
       <input type="hidden" name="price" value="<?= $fetch_product['price']; ?>">
       <input type="hidden" name="image" value="<?= $fetch_product['image']; ?>">
       <!-- <button class="fas fa-heart" type="submit" name="add_to_wishlist"></button> -->
-      <a href="quick_view.php?pid=<?= $fetch_product['product_id']; ?>" class="fas fa-eye"></a>
-      <img src="uploaded_img/<?= $fetch_product['image']; ?>" alt="">
+      
+      <a href="quick_view.php?pid=<?= $fetch_product['product_id']; ?>"><img src="uploaded_img/<?= $fetch_product['image']; ?>" alt=""></a>
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
          <div class="price"><span>$</span><?= $fetch_product['price']; ?></div>

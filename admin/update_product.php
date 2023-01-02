@@ -87,7 +87,7 @@ if(isset($_POST['update'])){
       <span>update name</span>
       <input type="text" name="name" required class="box" maxlength="100" placeholder="enter product name" value="<?= $fetch_products['name']; ?>">
       <span>update price</span>
-      <input type="number" name="price" required class="box" min="0" max="9999999999" placeholder="enter product price" onkeypress="if(this.value.length == 10) return false;" value="<?= $fetch_products['price']; ?>">
+      <input type="number" name="price" required class="box" placeholder="enter product price" value="<?= $fetch_products['price']; ?> ">
       <span>update details</span>
       <textarea name="details" class="box" ><?= $fetch_products['details']; ?></textarea>
       <span>update image</span>
@@ -107,7 +107,7 @@ if(isset($_POST['update'])){
                <option class="dropdown-item" value="<?= $fetch_category['category_id'] ?>">
                      <?php 
                      // جوا تاج الاوبشن بقله اطبعلي الاي دييه لكل كاتيجوري بالاضافة لاسمها و بسكر التاج بعيدها
-                     echo $fetch_category['category_id'] . "/" . $fetch_category['category_name']; 
+                     echo $fetch_category['category_name']; 
                      ?>
                </option>
                <!-- هون بتكون جملة اللوب الاولى تبعت الوايل خلصت , فبرجع بلف كمان مرة و بطلع الكاتيجوري الثانية و هيك -->

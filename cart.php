@@ -52,7 +52,7 @@ if(isset($_POST['update_qty'])){
 
 <h3 class="heading">shopping cart</h3>
 
-<div class="box-container">
+<div class="box-container cartContainer">
 
 <?php
    $total_price = 0;
@@ -62,10 +62,11 @@ if(isset($_POST['update_qty'])){
       while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
 ?>
 <!-- __________________ -->
-<form action="" method="post" class="box">
+<form action="" method="post" class="box cartItem">
    <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
 
-   <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
+   <img class="cartImage" src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
+   <div>
    <div class="name"><?= $fetch_cart['name']; ?></div>
 
    <div class="flex">
@@ -79,7 +80,7 @@ if(isset($_POST['update_qty'])){
          
          if ($fetch_product['is_sale'] == 1){ ?>
 
-         <div class="price"><span><del style="text-decoration:line-through; color:silver">$<?= $fetch_product['price']; ?></del><ins style="color:green;"> $<?=$fetch_product['price_discount'];?></ins> </span></div>
+         <div class="price"><span style="display: flex; flex-direction: row;"><del style="text-decoration:line-through; color:silver"><?= $fetch_product['price']; ?>JD</del><ins style="color:green;"> <?=$fetch_product['price_discount'];?>JD</ins> </span></div>
 
          <?php } else { ?>
 
@@ -95,6 +96,7 @@ if(isset($_POST['update_qty'])){
    </div>
    <div class="sub-total"> Sub Total : <span>$<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></span> </div>
    <input type="submit" value="delete item" onclick="return confirm('delete this from cart?');" class="delete-btn" name="delete">
+         </div>
 </form>
 <!-- _____________________ -->
 <?php
@@ -114,42 +116,6 @@ $total_price += $sub_total;
 </div>
 
 </section>
-
-<section>
-
-<table>
-   <form>
-   <tr>
-   <th>Image</th>
-   <th>Name</th>
-   <th>quantity</th>
-   <th>price</th>
-   <th>price_discount</th>
-   <th>update</th>
-   <th>Sub Total</th>
-   <th>delete</th>
-
-</tr>
-
-</form>
-</table>
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
 
 <?php include 'components/footer.php'; ?>
 
