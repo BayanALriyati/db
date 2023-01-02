@@ -61,7 +61,7 @@ if(isset($_SESSION['user_id'])){
    
 <?php include 'components/user_header.php'; ?>
 <section>
-<h2 class="title">Get in touch</h2>
+<h2 class="title">Get In Touch</h2>
 <br>
 <img class="cimg" src="images/contactimg.png" alt="">
 </section>
@@ -75,7 +75,7 @@ if(isset($_SESSION['user_id'])){
          <div class="adress details">
          <i class="fas fa-map-marker-alt conticon"></i>
          <br><br>
-         <div class="topic">Adress</div> 
+         <div class="topic">Address</div> 
          <div class="text-one">Jorden</div>
          </div>
 

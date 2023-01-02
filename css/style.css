@@ -10,8 +10,9 @@
    --black:#333;
    --white:#fff;
    --light-color:#666;
-   --light-bg:#fff6e5;
-   /* --light-bg:#eee; */
+   /* --light-bg:#fff6e5; */
+   /* --light-bg:#fff6e5; */
+   --light-bg:#eee;
    /* --border:.2rem solid var(--black); منظر الاطارات غير جميل */
    --box-shadow:0 .5rem 1rem rgba(0, 0, 0,0.441);
 }
@@ -23,11 +24,13 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
+   
 }
 
 *::selection{
    background-color: var(--main-color);
    color:var(--white);
+   
 }
 
 ::-webkit-scrollbar{
@@ -50,6 +53,7 @@ html{
 
 body{
    background-color: var(--light-bg);
+   
 }
 
 section{
@@ -66,10 +70,11 @@ section{
    text-transform: uppercase;
 }
 
+
 .btn,
 .delete-btn,
 .option-btn{
-   display: block;
+   display: block; 
    width: 100%;
    margin-top: 1rem;
    border-radius: .5rem;
@@ -98,6 +103,8 @@ section{
 .delete-btn{
    background-color: var(--red);
 }
+
+
 
 .flex-btn{
    display: flex;
@@ -242,9 +249,10 @@ section{
 
 
 .home-bg{
-   background:url(../images/home-bg.jpg) no-repeat; /* edit */
+   background:url(../images/home-bg.jpg) no-repeat;/* edit */
    background-size: cover;
    background-position: center;
+   opacity: 1;
 }
 
 .home-bg .home .slide{
@@ -296,7 +304,7 @@ section{
 .category1 h1{
    text-align: center;
    color: var(--black);
-   margin: 2rem;
+   margin-top: 2rem;
    padding: 2rem;
    font-size: 5rem;
    
@@ -307,13 +315,16 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
    gap:1.5rem;
    align-items: flex-start;
+
 }
 
 .category1 .box-container1 .box1{
    background-color: var(--white);
    padding:2rem;
-   width: 20rem;
+   width: 25rem;
+   height: 25rem;
    text-align: center;
+   border: 6px solid #f39c12;
    border-radius: 50%;
    box-shadow:var(--box-shadow);
    
@@ -321,8 +332,9 @@ section{
 
 .category1 .box-container1 .box1 img{
    width: 100%;
-   height: 10rem;
+   height: 13rem;
    object-fit: contain;
+   padding-top: .5rem;
 }
 
 .category1 .box-container1 .box1 h3{
@@ -524,6 +536,27 @@ section{
    align-items: flex-start;
 }
 
+.header-shop{
+   margin: 3rem 25rem;
+   width: 100%;
+}
+
+.header-shop button {
+   margin: 2rem .5rem;
+   color: var(--black);
+   background-color: #fff;
+   padding: 2rem;
+   border: 2px solid black;
+}
+
+
+.header-shop button:hover {
+   background-color:var(--main-color) ;
+   color:var(--white);
+} 
+
+
+
 .products .box-container .box{
    position: relative;
    background-color: var(--white);
@@ -606,6 +639,7 @@ section{
    margin-right: auto;
 }
 
+
 .form-container form{
    background-color: var(--white);
    padding:2rem;
@@ -618,25 +652,26 @@ section{
 }
 
 .form-container form h3{
-   font-size: 2.5rem;
+   font-size: 2rem;
    text-transform: uppercase;
    color:var(--black);
 }
 
 .form-container form p{
    font-size: 2rem;
-   color:var(--light-color);
+   color:var(--red);
    margin:1.5rem 0;
 }
 
 .form-container form .box{
    margin:1rem 0;
-   background-color: var(--light-bg);
+   background-color: var(--white);
    padding:1.4rem;
-   font-size: 1.8rem;
+   font-size: 1.5rem;
    color:var(--black);  
    width: 100%;
    border-radius: .5rem;
+   border: 3px solid var(--main-color);
 }
 
 .about .row{
@@ -963,8 +998,9 @@ section{
 .footer .grid{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap:1.5rem;
+   gap:2rem;
    align-items: flex-start;
+   justify-items: center;
 }
 
 .footer .grid .box h3{
@@ -1076,8 +1112,27 @@ section{
 
    .checkout-orders form .flex .inputBox{
       width: 100%;
+background-image: overlay;
    }
 
 }
+:root{
+   --swiper-theme-color:var(--orange) !important;
+}
+.zeena{
+   text-align: center !important;
+   padding-bottom: 2rem;
+   margin-bottom: 3rem;
+}
+
+.latest{
+   margin-bottom: 10rem;
+
+}
+#lated{
+   margin-top: 10rem;
+}
+
+
 
 /* ///////////////////////////////////////// */

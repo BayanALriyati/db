@@ -254,7 +254,7 @@ if(isset($_GET['delete'])){
       <td>
          <button type="button" class="btn btn-primary s-s"><a style="color:black;" href="update_product.php?update=<?= $fetch_products['product_id']; ?>" >edit</a></td>
       <td>   
-         <button type="button" class="btn btn-danger s-s"><a style="color:black;" href="products.php?delete=<?= $fetch_products['product_id']; ?>"  onclick="return confirm('delete this product?');">delete</a>
+         <button type="button" class="btn btn-dark s-s"><a style="color:white;" href="products.php?delete=<?= $fetch_products['product_id']; ?>"  onclick="return confirm('delete this product?');">delete</a>
       </td>
     </tr>
     <?php

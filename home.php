@@ -38,7 +38,6 @@ if(isset($_SESSION['user_id'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
    
@@ -101,7 +100,11 @@ if(isset($_SESSION['user_id'])){
 
 <section class="category1">
 
-   <h1 class="title">Category</h1>
+   <div class="zeena">
+      <h1 class="title">Category</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
+
 
    <div class="box-container1">
    <?php  $select_catogry =" SELECT * FROM category " ;
@@ -115,7 +118,7 @@ if(isset($_SESSION['user_id'])){
 
       ?>
       <a href="category.php?category=<?php echo "$category_id" ?>" class="box1">
-         <img src="images\<?php echo "$image_01" ?>" alt="" width="30" height="30">
+         <img src="images\<?php echo "$image_01" ?>" alt="" width="70" height="70">
          <h3><?php echo "$category_name" ?></h3>
       </a>
       
@@ -128,7 +131,11 @@ if(isset($_SESSION['user_id'])){
 
 <section class="home-products">
 
-   <h1 class="heading">Salling products</h1>
+   <div class="zeena">
+      <h1 class="heading">On Sale</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
+
 
    <div class="swiper products-slider">
 
@@ -204,29 +211,6 @@ var swiper = new Swiper(".home-slider", {
       el: ".swiper-pagination",
       clickable:true,
     },
-});
-
- var swiper = new Swiper(".category-slider", {
-   loop:true,
-   spaceBetween: 20,
-   pagination: {
-      el: ".swiper-pagination",
-      clickable:true,
-   },
-   breakpoints: {
-      0: {
-         slidesPerView: 2,
-       },
-      650: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1024: {
-        slidesPerView: 5,
-      },
-   },
 });
 
 var swiper = new Swiper(".products-slider", {
