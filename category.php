@@ -44,8 +44,15 @@ if(isset($_SESSION['user_id'])){
 <?php include 'components/user_header.php'; ?>
 
 <section class="products">
-
-   <h1 class="heading">category</h1>
+<?php $cd =$_GET['category'] ;?>
+<?php  $select_catogry =" SELECT * FROM category WHERE category_id=? " ;
+      $X = $conn-> prepare($select_catogry);
+      $X -> execute([$cd]);
+      $c = $X->fetch();
+      $category_id= $c['category_id'];
+      $category_name = $c['category_name'];
+      ?>
+   <h1 class="heading"><?=$category_name?></h1>
 
    <div class="box-container">
 
