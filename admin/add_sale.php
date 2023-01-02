@@ -29,23 +29,47 @@
     <section class="update-product">
         <h1 class="heading">Sale Form</h1> 
         <form action="" method="post" enctype="multipart/form-data">
-            <span>Add New Form</span>
-            <input type="number" name="new_price" required class="box" min="0" max="9999999999" placeholder="enter product price" onkeypress="if(this.value.length == 10) return false;">
+            
+          <?php  $id = $_GET['sale'];
+$select_products = $conn->prepare("SELECT * FROM `products` WHERE product_id='$id'");
+      $select_products->execute();
+    $slect_pro = $select_products->fetch();
+    $pro_name = $slect_pro['name'];
+    $old_prise = $slect_pro['price'];
+    ?>
+            <span><h4>Product Name : </h4></span><span><?= $pro_name; ?></span>
+            <br>
+            <span><h4>Original Product Price: </h4></span><span>JD<?= $old_prise; ?></span>
+            <br>
+            <br>
+            <span></span>
+            <input type="number" name="new_price" required class="box" placeholder="enter discount percentage">
             <div class="flex-btn">
-                <input type="submit" name="update" class="btn" value="update">
-                <a href="sales.php" class="option-btn">go back</a>
+                <input type="submit" name="update" class="btn" value="ADD">
+                <a href="sales.php" class="option-btn">Go Gack</a>
             </div>
         </form>
 <script src="../js/admin_script.js"></script>
 </body>
 </html>
+<?PHP
 
+
+
+?>
 <?php
-$id = $_GET['sale'];
-
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['new_price'])){
-    $discount_price = $_POST['new_price'];
-    $xx = $conn->prepare("UPDATE products set price_discount='$discount_price', is_sale='1' WHERE product_id='$id'");
+    $id = $_GET['sale'];
+$select_products = $conn->prepare("SELECT * FROM `products` WHERE product_id='$id'");
+      $select_products->execute();
+$slect_pro = $select_products->fetch();
+    $old_prise = $slect_pro['price'];
+    $precent = $_POST['new_price'] / 100;
+    $precent *= $old_prise ;
+    $discount_price = $old_prise - $precent;
+( $_POST['new_price']*10/100);
+    $xx = $conn->prepare("UPDATE products set price_discount='$discount_price', is_sale='1'
+                                    WHERE product_id='$id'");
     $xx->execute();
     header('location:products.php');
 }

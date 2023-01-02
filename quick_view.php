@@ -37,31 +37,16 @@ if(isset($_SESSION['user_id'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/98bf175dbe.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/comment.css">
 </head>
-<style>
-    *{
-        font-family:'Times New Roman', Times, serif !important;
-        /* font-weight: 900% !important; */
-    }
-   .heading{
-    font-weight:900 !important
-   }
-    a{
-        text-decoration:none !important;
-    }
-</style>
 <body>
    
 <?php include 'components/user_header.php'; ?>
 
 <section class="quick-view">
 
-   <p class="heading">quick view</p>
+   <h1 class="heading">quick view</h1>
 
    <?php
      $pid = $_GET['pid'];
@@ -136,10 +121,12 @@ if(isset($_SESSION['user_id'])){
            $comment_content = $comment['review_text'];
            $user_name = $comment['name'];
            ?>
-                  <h4 class=""><?php echo $user_name ?></h4>
-                  <h5><?php echo $comment_date ?></h5>
-                  <p><?php echo  $comment_content; ?></p><?php } ?>
-                  
+           <div class="com">
+                  <h2 id="uscom"><?php echo $user_name ?></h>
+                  <p id="datecom"><?php echo $comment_date ?></p>
+                  <p id="textcom"><?php echo  $comment_content; ?></p>
+                 
+            </div><br> <?php } ?>
          <?php if (isset($_POST['submit_comment'])) {
             if (isset($_SESSION['user_id'])) {
                $comment_text = $_POST['comment_text'];
@@ -147,7 +134,7 @@ if(isset($_SESSION['user_id'])){
                VALUES ('$user_id','$pid','$comment_text ',NOW())";
                $stmt = $conn->query($sqlInserComment);
                $return_to_page =  $_SERVER['PHP_SELF'];
-               header("location:./quick_view.php?pid=$pid");
+               header("location:quick_view.php?pid=$pid");
             }
          }
          if (!$stmt->execute([$pid])) {
@@ -169,39 +156,6 @@ if(isset($_SESSION['user_id'])){
             </div>
             </form>
          <?php } ?> 
-</section>
-
-<!-- / -->
-<section>
-  <div class="container my-5 py-5 text-dark">
-    <div class="row d-flex justify-content-center">
-      <!-- <div class="col-md-11 col-lg-2 col-xl-7"> -->
-        <div class="d-flex flex-start mb-4">
-          <img class="rounded-circle shadow-1-strong me-3"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar" width="65"
-            height="65" />
-          <div class="card">
-            <div class="card-body p-4">
-              <div class="f-5">
-                <h5>Johny Cash</h5>
-                <p class="small">3 hours ago</p>
-                <p class="fs-3">
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-                  ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-                  viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                  Donec lacinia congue felis in faucibus ras purus odio, vestibulum in
-                  vulputate at, tempus viverra turpis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- ///////////////// -->
-
-      </div>
-    </div>
-  </div>
 </section>
 
 <?php include 'components/footer.php'; ?>

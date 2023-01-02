@@ -43,13 +43,13 @@ if(isset($_SESSION['user_id'])){
 <section class="category1">
 
    <div class="zeena">
-      <h1 class="title">Shop by Category</h1>
+      <h1 class="heading">SHOP BY CATEGORY</h1>
       <img src="images/zeena1.png" alt="" width="30%">
    </div>
 
 
    <div class="header-shop">
-      <a href="shop.php"><h3 id=all>PRODUCTS</h3></a>
+      <a href="shop.php"><h3 >PRODUCTS</h3></a>
    <?php  $select_catogry =" SELECT * FROM category " ;
       $X = $conn-> prepare($select_catogry);
       $X -> execute();
@@ -70,7 +70,7 @@ if(isset($_SESSION['user_id'])){
 <section class="products">
 
    <div class="zeena latest">
-      <h1 class="heading" id="lated">Products</h1>
+      <h1 class="heading">Products</h1>
       <img src="images/zeena1.png" alt="" width="30%">
    </div>
    <div class="box-container">
