@@ -1123,3 +1123,25 @@ background-image: overlay;
 
 
 /* ///////////////////////////////////////// */
+.cartItem{    margin: auto !important;
+   display: flex !important;
+   flex-direction: row !important;
+   align-items: center !important;
+   width: max-content !important;}
+
+   .cartContainer{
+      display: flex !important;
+      flex-direction: column !important;
+   }
+
+ 
+   @media  (min-width:600px) {
+      .cartImage{
+      min-width: 70rem !important;
+   }  
+   }
+   @media  (max-width:600px) {
+      .cartImage{
+      width: 15rem !important;
+   }  
+   }

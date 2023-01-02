@@ -11,7 +11,8 @@ if (isset($_SESSION['user_id'])) {
 };
 
 ?>
-<?php if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])) {
+<!-- _______addTOcart__________ -->
+<?php if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addTOcart'])){
    $product_id = $_POST['product_id'];
    $product_name = $_POST['name'];
    $product_price = $_POST['price'];
@@ -104,34 +105,33 @@ if (isset($_SESSION['user_id'])) {
 
    <section class="category1">
 
-      <div class="zeena">
-         <h1 class="heading">Category</h1>
-         <img src="images/zeena12.png" alt="" width="30%">
-      </div>
+   <div class="zeena">
+      <h1 class="heading">Category</h1>
+      <img src="images/zeena1.png" alt="" width="30%">
+   </div>
 
 
-      <div class="box-container1">
-         <?php $select_catogry = " SELECT * FROM category ";
-         $X = $conn->prepare($select_catogry);
-         $X->execute();
-         while ($c = $X->fetch()) {
-            $category_id = $c['category_id'];
-            $category_name = $c['category_name'];
-            $image_01 = $c['image_01'];
+   <div class="box-container1">
+   <?php  $select_catogry =" SELECT * FROM category " ;
+      $X = $conn-> prepare($select_catogry);
+      $X -> execute();
+      while ($c = $X->fetch() ){
+      $category_id= $c['category_id'];
+      $category_name = $c['category_name'];
+      $image_01 = $c['image_01'];
+      
 
+      ?>
+      <a href="category.php?category=<?php echo "$category_id" ?>" class="box1">
+         <img src="images\<?php echo "$image_01" ?>" alt="" width="70" height="70">
+         <h3><?php echo "$category_name" ?></h3>
+      </a>
+      
+      <?php } ?>
+   
+   </div>
 
-         ?>
-            <a href="category.php?category=<?php echo "$category_id" ?>" class="box1">
-               <img src="images\<?php echo "$image_01" ?>" alt="" width="70" height="70">
-               <h3><?php echo "$category_name" ?></h3>
-            </a>
-
-         <?php } ?>
-
-      </div>
-
-   </section>
-
+</section>
 
    <section class="home-products">
 
