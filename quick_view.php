@@ -121,9 +121,10 @@ if(isset($_SESSION['user_id'])){
            $comment_content = $comment['review_text'];
            $user_name = $comment['name'];
            ?>
-                  <h4><?php echo $user_name ?></h4>
+                  <h4 class=""><?php echo $user_name ?></h4>
                   <h5><?php echo $comment_date ?></h5>
                   <p><?php echo  $comment_content; ?></p><?php } ?>
+                  
          <?php if (isset($_POST['submit_comment'])) {
             if (isset($_SESSION['user_id'])) {
                $comment_text = $_POST['comment_text'];

@@ -82,9 +82,7 @@ if(isset($_GET['delete'])){
     table, th, td {
   font-size: large;
  }
-.btnn{
 
-}
  </style>
 </head>
 <body>
