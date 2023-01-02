@@ -61,6 +61,7 @@ body{
    background-position-y: 130rem;
    background-size:50%;
 background-repeat: no-repeat;
+
    
 }
 
@@ -102,10 +103,12 @@ section{
 
 .btn{
    background-color: var(--main-color);
+   text-align:center;
 }
 
+
 .option-btn{
-   background-color: var(--orange);
+   background-color: var(--main-color);
 }
 
 .delete-btn{

@@ -137,8 +137,8 @@ if(isset($_GET['delete'])){
     <tr>
       <th scope="row"><img src="../uploaded_img/<?= $fetch_categorys['image_01']; ?>" width="90px" alt=""></th>
       <td><?= $fetch_categorys['category_name']; ?></td>
-      <td><button type="button" class="btn "><a href="update_category.php?update=<?= $fetch_categorys['category_id']; ?>" class="option-btn">update</a></button></td>
-      <td><button type="button" class="btn "><a href="category.php?delete=<?= $fetch_categorys['category_id']; ?>" class="delete-btn" onclick="return confirm('delete this category?');">delete</a></button></td>
+      <td style="text-align:center;"><button type="button"><a href="update_category.php?update=<?= $fetch_categorys['category_id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a></button></td>
+      <td style="text-align:center;"><button type="button" ><a href="category.php?delete=<?= $fetch_categorys['category_id']; ?>" onclick="return confirm('delete this category?');"><i class="fa-solid fa-trash delete1"></a></button></td>
     </tr>
     <?php
          }
