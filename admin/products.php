@@ -206,14 +206,16 @@ if(isset($_GET['delete'])){
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Image</th>
+
       <th scope="col">Description</th>
       
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Price_discount</th>
-      
+      <th scope="col">Add Sale</th>
+      <th scope="col">Remove Sale</th>
       <th scope="col">Catecgory</th>
-
+   
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -232,6 +234,8 @@ if(isset($_GET['delete'])){
       <td ><?php echo $fetch_products['name'];?></td>
       <td >JD<span><?= $fetch_products['price']; ?></td>
       <td >JD<span><?= $fetch_products['price_discount']; ?></td>
+      <td><a style="background-color: green ;color:white;" href="add_sale.php?sale=<?= $fetch_products['product_id']; ?>" class="btn">Add Sale</a></td>
+      <td> <a  style="background-color: red;" href="remove_sale.php?removeSale=<?= $fetch_products['product_id']; ?>"class="btn">Remove Sale</a></td>
       <?php $product_category = $conn->prepare("SELECT * 
                                         FROM `products`
                                         INNER JOIN `category` ON products.category_id = category.category_id");
