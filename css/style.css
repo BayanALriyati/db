@@ -72,11 +72,11 @@ section{
 }
 
 .heading{
-   font-size: 4rem;
+   font-size: 5rem;
    color:var(--black);
    margin-bottom: 2rem;
    text-align: center;
-   text-transform: uppercase;
+   /* text-transform: uppercase; */
 }
 
 
