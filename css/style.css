@@ -324,7 +324,7 @@ section{
    width: 25rem;
    height: 25rem;
    text-align: center;
-   border: 6px solid #f39c12;
+   /* border: 6px solid var(--main-color); */
    border-radius: 50%;
    box-shadow:var(--box-shadow);
    
@@ -344,11 +344,15 @@ section{
 }
 
 .category1 .box-container1 .box1:hover{
-   background-color:var(--main-color) ;
+   transform: scale(1.1);
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+   /* background-color: var(--main-color); */
+   box-shadow:var(--box-shadow);
+
 }
 
 .category1 .box-container1 .box1:hover h3{
-   color:var(--white);
+   color:var(--black);
 }
 
 .home-products .slide{

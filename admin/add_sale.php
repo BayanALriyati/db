@@ -33,8 +33,7 @@ $id = $_GET['sale'];
 
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['new_price'])){
     $discount_price = $_POST['new_price'];
-    $xx = $conn->prepare("UPDATE products set price_discount='$discount_price', is_sale='1'
-                                    WHERE product_id='$id'");
+    $xx = $conn->prepare("UPDATE products set price_discount='$discount_price', is_sale='1' WHERE product_id='$id'");
     $xx->execute();
     header('location:products.php');
 }
