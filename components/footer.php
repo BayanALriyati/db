@@ -21,8 +21,9 @@
                </li>
              </ul>
 
-                 <p class=copyright>
-               © 2023 FeLux
-                 </p>
+                 
+                 <div class=copyright>&copy; copyright @ <?= date('Y'); ?> by <span>FeLux</span> | all rights reserved!</div>
+
+                 
    </section>
 </footer>
