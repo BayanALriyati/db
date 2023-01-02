@@ -795,6 +795,12 @@ section{
    color:var(--black);
 }
 
+.com {
+   padding: 1rem;
+   background-color: #fff;
+   font-size: 10px;
+}
+
 .contact form{
    padding:2rem;
    text-align: center;
