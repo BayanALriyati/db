@@ -58,7 +58,12 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <link rel="stylesheet" href="../css/admin_style.css">
-
+<style>
+   
+    a{
+        text-decoration:none !important;
+    }
+</style>
 </head>
 <body>
 
@@ -67,7 +72,7 @@ if(isset($_POST['submit'])){
 <section class="form-container">
 
    <form action="" method="post">
-      <h3>update profile</h3>
+      <h3>Update Profile</h3>
       <input type="hidden" name="prev_pass" value="<?= $fetch_profile['password']; ?>">
       <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="old_pass" placeholder="enter old password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
