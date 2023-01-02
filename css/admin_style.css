@@ -22,7 +22,7 @@
 }
 
 *{
-   font-family: 'Nunito', sans-serif;
+   /* font-family: 'Nunito', sans-serif; */
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
@@ -53,8 +53,8 @@ html{
 }
 
 body{
-   background-color: var(--light-bg);
-   /* padding-bottom: 10rem; */
+   background: radial-gradient(#e6e6e6, #ffffff,#e6e6e6);
+text-align:center;
 }
 
 section{
@@ -94,10 +94,21 @@ section{
 
 .btn{
    background-color: var(--main-color);
+text-align:center;
+
+}
+.delete1{
+   color: #e74c3c !important;
+}
+.zeena{
+   text-align: center !important;
+   padding-bottom: 2rem;
+   margin-top: 6rem;
+   margin-bottom: 3rem;
 }
 
 .option-btn{
-   background-color: var(--orange);
+   background-color: var(--main-color) !important;
 }
 
 .delete-btn{
@@ -295,6 +306,8 @@ section{
    gap:1.5rem;
    justify-content: center;
    align-items: flex-start;
+ 
+
 }
 
 .dashboard .box-container .box{
@@ -649,4 +662,7 @@ section{
 }
 :root{
    --swiper-theme-color:var(--orange) !important;
+}
+.option-btn{
+   background-color:var(--main-color);
 }
