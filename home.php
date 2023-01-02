@@ -91,7 +91,7 @@ if(isset($_SESSION['user_id'])){
 
    <div class="zeena">
       <h1 class="title">Category</h1>
-      <img src="images/zeena1.png" alt="" width="30%">
+      <img src="images/zeena12.png" alt="" width="30%">
    </div>
 
 
@@ -122,7 +122,7 @@ if(isset($_SESSION['user_id'])){
 
    <div class="zeena">
       <h1 class="heading">On Sale</h1>
-      <img src="images/zeena1.png" alt="" width="30%">
+      <img src="images/zeena12.png" alt="" width="30%">
    </div>
 
 

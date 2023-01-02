@@ -53,6 +53,14 @@ html{
 
 body{
    background-color: var(--light-bg);
+   background-image:url(../images/deoor.png)transparent 70%;
+   background-size: contain;
+   background-blend-mode: multiply ;
+   /* background-position: left; */
+   background-position-x: -20rem;
+   background-position-y: 130rem;
+   background-size:50%;
+background-repeat: no-repeat;
    
 }
 
@@ -245,7 +253,6 @@ section{
 #menu-btn{
    display: none;
 }
-
 
 
 .home-bg{
