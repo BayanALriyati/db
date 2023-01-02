@@ -953,68 +953,63 @@ section{
    color:var(--main-color);
 }
 
+/* _________Footer_________ */
 .footer{
-   background-color: var(--white);
-   /* padding-bottom: 7rem; */
+   padding:40px 0 ;
+   background-color: #fff;
 }
-
-.footer .grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap: 2rem;
-   align-items: center;
-   align-content: stretch;
-   justify-items: center;
-}
-.logo1 {
-   font-size: 3.5rem;
-}
-
-.footer .grid .box h3{
-   font-size: 2rem;
-   color:var(--black);
-   margin-bottom: 2rem;
-   text-transform: capitalize;
-}
-
-.footer .grid .box a{
-   /* display: block; */
-   margin:1.5rem 0;
-   font-size: 1.7rem;
-   color:var(--light-color);
-}
-
-.footer .grid .box a i{
-   padding-right: 1rem;
-   color:var(--main-color);
-   transition: .2s linear;
-}
-
-.footer .grid .box a:hover{
-   color:var(--main-color);
-}
-
-.footer .grid .box a:hover i{
-   padding-right: 2rem;
-}
-
-.footer .credit{
+.footer .social {
    text-align: center;
-   padding: 2.5rem 2rem;
-   border-top: var(--border);
-   font-size: 2rem;
-   color:var(--black);
+   padding-bottom: 25px;
+   color: var(--main-color);
+
 }
-
-.footer .credit span{
-   color:var(--main-color);
+.footer .social .icon{
+   font-size: 24px;
+   color: inherit;
+   border: 1px solid var(--main-color);
+   width: 40px;
+   height: 40px;
+   line-height: 30px;
+   display: inline-block;
+   text-align: center;
+   border-radius: 50%;
+   margin: 0 8px;
+   opacity: 0.75;
+   padding-top: 5px;
 }
+.footer .social .icon:hover{
+   opacity: 0.9;
+}
+.footer ul {
+   margin-top:0 ;
+   padding: 0;
+   list-style:none ;
+   font-size: 18px;
+   line-height: 1.6;
+   margin-bottom: 0;
+   text-align: center;
+}
+.footer ul a{
+   color: #185e5d;
+   text-decoration: none;
+   opacity:.8px;
+}
+.footer ul li{
+   display: inline-block;
+   padding: 0 15px ;
+}
+.footer ul li a:hover{
+   opacity: 1;
 
 
-
-
-
-
+}
+.footer .copyright {
+   margin-top: 15px;
+   text-align: center;
+   font-size: 13px;
+   color: #666;
+}
 @media (max-width:991px){
 
    html{
