@@ -24,11 +24,13 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
+   
 }
 
 *::selection{
    background-color: var(--main-color);
    color:var(--white);
+   
 }
 
 ::-webkit-scrollbar{
@@ -51,6 +53,7 @@ html{
 
 body{
    background-color: var(--light-bg);
+   
 }
 
 section{
@@ -66,6 +69,7 @@ section{
    text-align: center;
    text-transform: uppercase;
 }
+
 
 .btn,
 .delete-btn,
@@ -300,7 +304,7 @@ section{
 .category1 h1{
    text-align: center;
    color: var(--black);
-   margin: 2rem;
+   margin-top: 2rem;
    padding: 2rem;
    font-size: 5rem;
    
@@ -311,13 +315,16 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
    gap:1.5rem;
    align-items: flex-start;
+
 }
 
 .category1 .box-container1 .box1{
    background-color: var(--white);
    padding:2rem;
-   width: 20rem;
+   width: 25rem;
+   height: 25rem;
    text-align: center;
+   border: 6px solid #f39c12;
    border-radius: 50%;
    box-shadow:var(--box-shadow);
    
@@ -325,8 +332,9 @@ section{
 
 .category1 .box-container1 .box1 img{
    width: 100%;
-   height: 10rem;
+   height: 13rem;
    object-fit: contain;
+   padding-top: .5rem;
 }
 
 .category1 .box-container1 .box1 h3{
@@ -1104,11 +1112,25 @@ section{
 
    .checkout-orders form .flex .inputBox{
       width: 100%;
+background-image: overlay;
    }
 
 }
 :root{
    --swiper-theme-color:var(--orange) !important;
+}
+.zeena{
+   text-align: center !important;
+   padding-bottom: 2rem;
+   margin-bottom: 3rem;
+}
+
+.latest{
+   margin-bottom: 10rem;
+
+}
+#lated{
+   margin-top: 10rem;
 }
 
 
