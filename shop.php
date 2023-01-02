@@ -66,8 +66,7 @@ if(isset($_SESSION['user_id'])){
       
    
    </div>
-
-</section>
+   </section>
 <section class="products">
 
    <div class="zeena latest">
@@ -98,7 +97,8 @@ if(isset($_SESSION['user_id'])){
       ?>
     
       <input type="hidden" name="image" value="<?= $fetch_product['image']; ?>">
-      <a href="quick_view.php?pid=<?= $fetch_product['product_id']; ?>"><img src="uploaded_img/<?= $fetch_product['image']; ?>" alt=""></a>
+      <a href="quick_view.php?pid=<?= $fetch_product['product_id']; ?>"><img src="uploaded_img/<?= 
+      $fetch_product['image']; ?>" alt=""></a>
       <div class="name"><?= $fetch_product['name']; ?></div>
       <div class="flex">
       <?php if ($fetch_product['is_sale'] == 1){ ?>

@@ -130,7 +130,7 @@ if(isset($_SESSION['user_id'])){
                 $stmt->execute([$pid]);
         while ($comment = $stmt->fetch()) {
            $comment_id = $comment['review_id'];
-           $user_id = $comment['user_id'];
+         //   $user_id = $comment['user_id'];
            $product_id = $comment['product_id'];
            $comment_date = $comment['review_date'];
            $comment_content = $comment['review_text'];
