@@ -78,13 +78,11 @@ if(isset($_POST['update'])){
          <div class="main-image">
             <img src="../uploaded_img/<?= $fetch_category['image_01']; ?>" alt="">
          </div>
-         <div class="sub-image">
-            <img src="../uploaded_img/<?= $fetch_category['image_01']; ?>" alt="">
-         </div>
+         
       </div>
       <span>update name</span>
       <input type="text" name="name" required class="box" maxlength="100" placeholder="enter product name" value="<?= $fetch_category['category_name']; ?>">
-      <span>update image 01</span>
+      <span>update image</span>
       <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
       <div class="flex-btn">
          <input type="submit" name="update" class="btn" value="update">

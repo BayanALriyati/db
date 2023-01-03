@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
 
    <form action="" method="post">
       <h3>login</h3>
-      <p> - Welcome Back -</p>
+      
       <input type="email" name="email" required placeholder="Enter Your Email" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       
       <input type="password" name="pass" required placeholder="Enter Your Password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">

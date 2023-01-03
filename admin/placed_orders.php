@@ -47,8 +47,10 @@ if(!isset($admin_id)){
       <th scope="col">placed on</th>
       <th scope="col">name</th>
       <th scope="col">number</th>
+      <th scope="col">email</th>
       <th scope="col">total products</th>
       <th scope="col">total price</th>
+      <th scope="col">order_time</th>
       
     </tr>
   </thead>
@@ -64,9 +66,11 @@ if(!isset($admin_id)){
     <tr>
       <td><?= $fetch_orders['location']; ?></td>
       <td><?= $fetch_orders['name']; ?></td>
-      <td><?= $fetch_orders['mobile']; ?></td>
+      <td><?= $fetch_orders['number']; ?></td>
+      <td><?= $fetch_orders['email']; ?></td>
       <td><?= $fetch_orders['total_quantity']; ?></td>
-      <td>$<?= $fetch_orders['total_price']; ?></td>
+      <td>JD<?= $fetch_orders['total_price']; ?></td>
+      <td><?= $fetch_orders['order_time']; ?></td>
     </tr>
 
     <?php
