@@ -79,7 +79,18 @@ if(isset($_GET['delete'])){
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <style>
-      
+      .flex{
+      font-family:'Times New Roman', Times, serif !important;
+      /* font-weight: 900 !important; */
+   }
+   .heading{
+      font-family:'Times New Roman', Times, serif !important;
+    font-weight:900 !important
+   }
+    
+    a{
+        text-decoration:none !important;
+    }
     table, th, td {
   font-size: large;
  }
@@ -92,7 +103,7 @@ if(isset($_GET['delete'])){
 
 <section class="add-products">
 
-   <h1 class="heading">add category</h1>
+   <h1 class="heading">Add Category</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
       <div class="flex">
@@ -113,7 +124,7 @@ if(isset($_GET['delete'])){
 
 <section class="show-products">
 
-   <h1 class="heading">categorys added</h1>
+   <h1 class="heading">Categorys Added</h1>
 
 <div class="col-lg-6 m-auto ">
    <div class="table-responsive table--no-card m-b-30">
@@ -136,7 +147,7 @@ if(isset($_GET['delete'])){
     <tr>
       <th scope="row"><img src="../uploaded_img/<?= $fetch_categorys['image_01']; ?>" width="90px" alt=""></th>
       <td><?= $fetch_categorys['category_name']; ?></td>
-      <td style="text-align:center;"><button type="button"><a href="update_category.php?update=<?= $fetch_categorys['category_id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a></button></td>
+      <td style="text-align:center;"><button type="button"><a class="editbtn" href="update_category.php?update=<?= $fetch_categorys['category_id']; ?>"><i class="fa-solid fa-pen-to-square"></i></a></button></td>
       <td style="text-align:center;"><button type="button" ><a href="category.php?delete=<?= $fetch_categorys['category_id']; ?>" onclick="return confirm('delete this category?');"><i class="fa-solid fa-trash delete1"></a></button></td>
     </tr>
     <?php

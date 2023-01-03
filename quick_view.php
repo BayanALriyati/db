@@ -121,7 +121,7 @@ if(isset($_SESSION['user_id'])){
            $comment_content = $comment['review_text'];
            $user_name = $comment['name'];
            ?>
-           <div class="commm">
+           <div class="com">
                   <h2 id="uscom"><?php echo $user_name ?></h>
                   <p id="datecom"><?php echo $comment_date ?></p>
                   <p id="textcom"><?php echo  $comment_content; ?></p>
