@@ -51,7 +51,7 @@ if(!isset($admin_id)){
    </div>
 
 <!-- <h3>welcome!</h3>
-         <p><?= $fetch_profile['name']; ?></p> -->
+         <p><?= $fetch_profile['name']; ?></p>  -->
    <div class="box-container" style="display: flex;align-items: center;">
          
    

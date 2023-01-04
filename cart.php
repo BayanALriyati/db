@@ -110,8 +110,8 @@ $total_price += $sub_total;
 
 <div class="cart-total">
    <p>Total Price : <span>$<?= $total_price; ?></span></p>
-   <a href="shop.php" class="option-btn">continue shopping</a>
-   <a href="cart.php?delete_all" class="delete-btn <?= ($total_price > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from cart?');">delete all item</a>
+   <!-- <a href="shop.php" class="option-btn">continue shopping</a>
+   <a href="cart.php?delete_all" class="delete-btn <?= ($total_price > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from cart?');">delete all item</a> -->
    <a href="checkout.php" class="btn <?= ($total_price > 1)?'':'disabled'; ?>">proceed to checkout</a>
 </div>
 

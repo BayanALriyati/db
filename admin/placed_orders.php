@@ -52,18 +52,17 @@ if(!isset($admin_id)){
 <section class="orders">
 
 <h1 class="heading">Placed Orders</h1>
-<div class="col-lg-9 m-auto ">
-                    <div class="table-responsive table--no-card m-b-30">
+<div class="col-lg-12 m-auto ">
+                    <div class="table-responsive table--no-card m-b-40">
                         <table class="table table-borderless table-striped table-earning">  <thead>
     <tr>
-      <th scope="col">placed on</th>
-      <th scope="col">name</th>
-      <th scope="col">number</th>
-      <th scope="col">email</th>
-      <th scope="col">total products</th>
-      <th scope="col">total price</th>
-      <th scope="col">order_time</th>
-      
+      <th scope="col">Location</th>
+      <th scope="col">Name</th>
+      <th scope="col">Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Total Products</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">Order_Time</th>
     </tr>
   </thead>
   <tbody>
