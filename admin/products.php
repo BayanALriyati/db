@@ -17,12 +17,8 @@ if(!isset($admin_id)){
 if(isset($_POST['add_product'])){
 
    $name = $_POST['name'];
-   $name = htmlspecialchars($name, ENT_QUOTES);
    $price = $_POST['price'];
-   $price = htmlspecialchars($price, ENT_QUOTES);
    $details = $_POST['details'];
-   $details = htmlspecialchars($details, ENT_QUOTES);
-
 
    $category_name = $_POST['category'];
 
@@ -148,7 +144,7 @@ if(isset($_GET['delete'])){
          </div>
          <div class="inputBox">
             <span>product price </span>
-            <input type="number" min="0" class="box" required max="9999999999" placeholder="enter product price" onkeypress="if(this.value.length == 10) return false;" name="price">
+            <input type="number" min="0" class="box" required max="9999999999" placeholder="enter product price"  name="price">
          </div>
         <div class="inputBox">
             <span>product image </span>
@@ -176,7 +172,7 @@ if(isset($_GET['delete'])){
                <option class="dropdown-item" name="category">
                      <?php 
                      // جوا تاج الاوبشن بقله اطبعلي الاي دييه لكل كاتيجوري بالاضافة لاسمها و بسكر التاج بعيدها
-                     echo $fetch_category['category_id'] . "/" . $fetch_category['category_name']; 
+                     echo $fetch_category['category_name']; 
                      ?>
                </option>
                <!-- هون بتكون جملة اللوب الاولى تبعت الوايل خلصت , فبرجع بلف كمان مرة و بطلع الكاتيجوري الثانية و هيك -->

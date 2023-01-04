@@ -77,7 +77,7 @@ if(isset($_POST['order'])){
                $total_price += ($fetch_cart['price'] * $fetch_cart['quantity']);
             $total_quantity += $fetch_cart['quantity'];
       ?>
-         <p> <?= $fetch_cart['name']; ?> <span>(<?= '$'.$fetch_cart['price'].' x '. $fetch_cart['quantity']; ?>)</span> </p>
+         <p> <?= $fetch_cart['name']; ?> <span>(<?= 'JD'.$fetch_cart['price'].' x '. $fetch_cart['quantity']; ?>)</span> </p>
       <?php
             }
          }else{
