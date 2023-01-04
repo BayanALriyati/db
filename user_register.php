@@ -14,8 +14,8 @@ if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
    $email = $_POST['email'];
-   $pass = sha1($_POST['pass']);
-   $cpass = sha1($_POST['cpass']);
+   $pass = $_POST['pass'];
+   $cpass = $_POST['cpass'];
 
    $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
    $select_user->execute([$email,]);

@@ -7,7 +7,7 @@ session_start();
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
-   $pass = sha1($_POST['pass']);
+   $pass = $_POST['pass'];
 
    $select_admin = $conn->prepare("SELECT * FROM `admins` WHERE name = ? AND password = ?");
    $select_admin->execute([$name, $pass]);
